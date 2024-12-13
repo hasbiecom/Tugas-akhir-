@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b67e368fa6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+          }
+          .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px;
+          }
+          .footer-about, .footer-links, .footer-social {
+            flex: 1 1 300px;
+            margin: 10px;
+          }
+          .footer-about h4, .footer-links h4, .footer-social h4 {
+            border-bottom: 2px solid #f9a825;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #f9a825;
+          }
+          .footer-links ul {
+            list-style: none;
+            padding: 0;
+          }
+          .footer-links ul li {
+            margin: 5px 0;
+          }
+          .footer-links ul li a {
+            color: #f9a825;
+            text-decoration: none;
+            transition: color 0.3s;
+          }
+          .footer-links ul li a:hover {
+            color: #fff;
+          }
+          .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #f9a825;
+            font-size: 20px;
+            transition: color 0.3s;
+          }
+          .social-icons a:hover {
+            color: #fff;
+          }
+          .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            font-size: 14px;
+            color: #ccc;
+          }
+        </style>
+    <div class="navbar">
+        <img src="./assets/images/logo-padang.png" alt="">
+        <ul>
+            <li><a href="./index.html">Daftar Makanan</a></li>
+            <li><a href="./tentang-kami.html">Tentang Kami</a></li>
+        </ul>     
+    </div>
+    <div class="main">
+        <div class="content" id='foodList'>
+        </div>  
+        <div class="sidebar" id="cartList">
+            <!-- <div class="total">
+                <h1>Total: Rp. 30.000</h1>
+                <hr>
+            </div>
+            <div class="card-order" >
+                <div class="detail">
+                    <img src="./assets/images/nasi-putih.jpg" alt="">
+                    <p>Nasi Putih</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            <div class="card-order" >
+                <div class="detail">
+                    <img src="./assets/images/sate-padang.jpg" alt="">
+                    <p>Sate Padang</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="card-order">
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="card-order">
+                <div class="detail">
+                    <img src="./assets/images/rawon.jpg" alt="">
+                    <p>Rawonr</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+                <div class="card-order">
+                <div class="detail">
+                    <img src="./assets/images/gulai-ikan.jpg" alt="">
+                    <p>Gulai Ikan</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/jengkol-balado.jpg" alt="">
+                    <p>Jengkol Balado</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/dendeng-batokok.jpg" alt="">
+                    <p>Dendeng Batokok</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/ayam-gulai.jpg" alt="">
+                    <p>Ayam Gulai</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/ayam-goreng.jpg" alt="">
+                    <p>Ayam Goreng</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/ayam-pop.jpg" alt="">
+                    <p>Ayam Pop</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/balado-cumi-terong.jpg" alt="">
+                    <p>Balado Cumi Terong</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/gulai-tunjang.jpg" alt="">
+                    <p>Gulai Tunjang</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/es_teh_manis.jpg" alt="">
+                    <p>Es Teh Manis</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/es-jeruj.jpg" alt="">
+                    <p>Es Jeruk</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/es-kopyor.jpg" alt="">
+                    <p>Es Kopyor</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/cappucino-cincau.jpg" alt="">
+                    <p>Cappucino Cincau</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/cheesecake-blueberry.jpg" alt="">
+                    <p>Chessecake Blueberry</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="detail">
+                    <img src="./assets/images/tiramisu.jpg" alt="">
+                    <p>Tiramisu</p>
+                    <span>3</span>
+                </div>
+                <button><i class="fas fa-trash"></i> Hapus</button>
+            </div>
+            <div class="card-finish">
+                <button>ORDER SEKARANG</button>
+            </div> -->
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-about">
+            <h4>Tentang Kami</h4>
+            <p>Rumah Makan Padang Sedap Rasa menyajikan hidangan khas Padang dengan cita rasa autentik. Kami berkomitmen memberikan pengalaman kuliner terbaik kepada Anda.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="tentang-kami.html">Tentang Kami</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h4>Ikuti Kami</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Rumah Makan Padang Sedap Rasa. All Rights Reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
